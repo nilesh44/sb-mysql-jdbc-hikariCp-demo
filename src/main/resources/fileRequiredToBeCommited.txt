@@ -1,0 +1,9 @@
+initial commit required at time of creation of gradle project
+1> all file from src folder
+2> all file from gradle folder
+3> gadlew file
+4> gradlew.bat file
+5> setting.gradle file
+6> build.gradle file
+7> rootProject.name should be same as the project folder name
+ e.g  rootProject.name = 'sb-mysq-jdbc-demo' is same as name of repositoy to be imported

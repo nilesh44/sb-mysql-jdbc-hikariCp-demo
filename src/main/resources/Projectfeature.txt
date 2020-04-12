@@ -1,0 +1,3 @@
+create seprate yml file for database and read that .yml file and load into configration java class
+
+configure hikari connection pooling for databsae))
