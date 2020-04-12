@@ -10,6 +10,8 @@ import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.support.EncodedResource;
 import org.springframework.core.io.support.PropertySourceFactory;
 
+//this class is use to read properties form custom .yml file
+//if we do not implement we cannot able to read properties from custom yml file. 
 public class YamlPropertySourceFactory implements PropertySourceFactory{
 
 	@Override

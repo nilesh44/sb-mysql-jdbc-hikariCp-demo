@@ -1,35 +1,25 @@
 package com.ace.controller;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.ace.config.DatabaseConfiguation;
-import com.ace.config.DbProperties;
 import com.ace.entity.Employee;
 import com.zaxxer.hikari.HikariDataSource;
 
 @RestController
 public class TestController {
-
-	@Autowired
-	 DbProperties dbProperties;
-	
-	@Autowired 
-	@Qualifier("DatabaseConfiguation")
-	DatabaseConfiguation  databaseConfiguation;
 	
 	@Autowired
-	@Qualifier("HikariDataSource")
-	HikariDataSource hikariDataSource;
+//we use qualifier annotation because we want to inject the the bean with respect to bean name
+//here we are injecting the bean with name declare as "HikariDataSourceBean"
+	@Qualifier("HikariDataSourceBean")
+	private HikariDataSource hikariDataSource;
 	
 	@GetMapping("/test")
 	public String test() {
